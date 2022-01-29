@@ -1,0 +1,189 @@
+.GarageBand-body {
+  .top-btns {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+}
+
+.GarageBand {
+  padding: 10rem 2.5rem 2.5rem 2.5rem;
+  @media only screen and (max-width: $mbl-small) {
+    padding: 10rem 1rem 1rem 1rem;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 34.3rem 1fr;
+    justify-content: start;
+
+    @media only screen and (max-width: $mbl-land) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__header--imgarea {
+    max-width: 34.3rem;
+    width: 100%;
+    max-height: 34.3rem;
+    width: 100%;
+
+    img {
+      @include img-size;
+      border: 1px solid #838387a2;
+      border-radius: 1rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+  }
+
+  &__contentarea {
+    padding: 0 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: $mbl-land) {
+      padding: 0;
+    }
+  }
+
+  &__name {
+    margin-bottom: 12rem;
+
+    @media only screen and (max-width: $mbl-land) {
+      margin: 2rem 0;
+    }
+    h2 {
+      font-size: 3.3rem;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  &__btn {
+    background-color: #eeeeef;
+    padding: 1.2rem 0;
+    border-radius: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s;
+
+    .icon {
+      width: 2rem;
+      height: 1.6rem;
+      fill: $color-primary;
+      transition: all 0.3s;
+    }
+
+    &--text {
+      color: $color-primary;
+      font-size: 2rem;
+      transition: all 0.3s;
+    }
+  }
+
+  &__btn:hover {
+    background-color: $color-primary;
+
+    .icon {
+      fill: $color-white;
+    }
+    .GarageBand__btn--text {
+      color: $color-white;
+    }
+  }
+
+  &__content {
+    margin-top: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-top: 1px solid #cfcfcf;
+    padding: 0.5rem 0;
+  }
+
+  &__song--imgarea {
+    height: 5.5rem;
+    width: 5.5rem;
+    margin-right: 2rem;
+
+    img {
+      @include img-size;
+    }
+  }
+
+  &__song--name {
+    font-size: 1.5rem;
+    margin-right: 8rem;
+
+    @media only screen and (max-width: $mbl-port) {
+      margin-right: 3rem;
+    }
+    @media only screen and (max-width: $mbl-small) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__album--name {
+    font-size: 1.6rem;
+    margin-right: auto;
+    color: #949497;
+
+    @media only screen and (max-width: $mbl-small) {
+      display: none;
+    }
+  }
+
+  &__last--details {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__download--icon {
+    @media only screen and (max-width: $mbl-small) {
+      display: none;
+    }
+    .icon {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
+  }
+
+  &__min {
+    font-size: 2rem;
+    color: #949497;
+  }
+
+  .btn-dott {
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    .icon {
+      fill: $color-black;
+      transition: all 0.3s;
+    }
+  }
+
+  .btn-dott:hover {
+    background-color: #eeeeee;
+    .icon {
+      fill: $color-primary;
+    }
+  }
+}

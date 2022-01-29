@@ -1,0 +1,93 @@
+h1.heading {
+  font-size: 3.9rem;
+  font-weight: 700;
+}
+
+h2.heading {
+  font-size: 4.2rem;
+  font-weight: 700;
+}
+
+h3.heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h4.heading {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+h5.heading {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.p__text {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+// Typography utils
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+.color-dark {
+  // fill: $color-gray;
+  // color: $color-gray;
+}
+
+@mixin pos-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin img-size {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin icon-vector {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+@mixin overlay-content {
+  background-color: #000;
+  max-width: 55rem;
+  z-index: 501;
+  border-radius: 1rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media only screen and (max-width: $tab-port) {
+    width: 80%;
+  }
+}
+
+@mixin button-outline {
+  height: 115%;
+  width: 115%;
+  content: "";
+  display: block;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  @include pos-center;
+}

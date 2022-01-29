@@ -1,0 +1,33 @@
+.overlay-active {
+  .GarageBand-playlist-body {
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.267);
+      z-index: 6;
+    }
+
+    .sidebar__icon .icon,
+    .sidebar__drop--btn .icon {
+      fill: #8e8e92;
+    }
+
+    .GarageBand__btn--text {
+      color: #8e8e92;
+    }
+    .GarageBand__btn .icon {
+      fill: #8e8e92;
+    }
+
+    .dot-btn .icon {
+      fill: #8e8e92;
+    }
+
+    .toggle-btn .icon {
+      fill: #8e8e92;
+    }
+  }
+}

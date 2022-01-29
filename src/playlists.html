@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playlists</title>
+
+    <!-- ================ FONTS ================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- ================ CSS FILES ================= -->
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="playlist-body">
+
+    <div class="toggle-btn">
+        <button class="btn open-toggle">
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <button class="btn close-toggle">
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#icon-toggle"></use>
+            </svg>
+        </button>
+    </div>
+
+    <aside class="sidebar pt-9">
+        <h1 class="heading pb-2">Music</h1>
+        <ul class="sidebar__list mb-2">
+            <li class="sidebar__item">
+                <a href="player.html">
+                    <span class="sidebar__icon">
+                        <svg class="icon icon-play">
+                            <use xlink:href="img/icons.svg#icon-play2"></use>
+                        </svg>
+                    </span>
+                    <span class="sidebar__text">Listen Now</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#">
+                    <span class="sidebar__icon">
+                        <svg class="icon icon-play">
+                            <use xlink:href="img/icons.svg#icon-browse"></use>
+                        </svg>
+                    </span>
+                    <span class="sidebar__text">Browse</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#">
+                    <span class="sidebar__icon">
+                        <svg class="icon icon-play">
+                            <use xlink:href="img/icons.svg#icon-radio"></use>
+                        </svg>
+                    </span>
+                    <span class="sidebar__text">radio</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#">
+                    <span class="sidebar__icon">
+                        <svg class="icon icon-play">
+                            <use xlink:href="img/icons.svg#icon-search"></use>
+                        </svg>
+                    </span>
+                    <span class="sidebar__text">search</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="dropdown-container">
+            <div class="sidebar__drop--btn mb-1">
+                <h3 class="heading">Library</h3>
+                <span class="icon-arrow-down">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#icon-down-arrow"></use>
+                    </svg>
+                </span>
+            </div>
+            <ul class="sidebar__list sidebar__list--dropdown mb-2">
+                <li class="sidebar__item">
+                    <a href="songs.html">
+                        <span class="sidebar__icon">
+                            <svg class="icon icon-play">
+                                <use xlink:href="img/icons.svg#icon-songs"></use>
+                            </svg>
+                        </span>
+                        <span class="sidebar__text">songs</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="albums.html">
+                        <span class="sidebar__icon">
+                            <svg class="icon icon-play">
+                                <use xlink:href="img/icons.svg#icon-albums"></use>
+                            </svg>
+                        </span>
+                        <span class="sidebar__text">albums</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#">
+                        <span class="sidebar__icon">
+                            <svg class="icon icon-play">
+                                <use xlink:href="img/icons.svg#icon-download"></use>
+                            </svg>
+                        </span>
+                        <span class="sidebar__text">download</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown-container">
+            <div class="sidebar__drop--btn mb-1">
+                <h3 class="heading">Playlists</h3>
+                <span class="icon-arrow-down">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#icon-down-arrow"></use>
+                    </svg>
+                </span>
+            </div>
+            <ul class="sidebar__list sidebar__list--dropdown mb-2">
+                <li class="sidebar__item active">
+                    <a href="playlists.html">
+                        <span class="sidebar__icon">
+                            <svg class="icon icon-play">
+                                <use xlink:href="img/icons.svg#icon-playlist"></use>
+                            </svg>
+                        </span>
+                        <span class="sidebar__text">All Playlists</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="index.html">
+                        <span class="sidebar__icon">
+                            <svg class="icon icon-play">
+                                <use xlink:href="img/icons.svg#icon-GarageBand"></use>
+                            </svg>
+                        </span>
+                        <span class="sidebar__text">GarageBand</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#">
+                        <span class="sidebar__icon">
+                            <svg class="icon icon-play">
+                                <use xlink:href="img/icons.svg#icon-GarageBand"></use>
+                            </svg>
+                        </span>
+                        <span class="sidebar__text">Untitled Playlist</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="GarageBand-playlists.html">
+                        <span class="sidebar__icon">
+                            <svg class="icon icon-play">
+                                <use xlink:href="img/icons.svg#icon-plus"></use>
+                            </svg>
+                        </span>
+                        <span class="sidebar__text">New Playlist</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+
+    <section class="playlist">
+        <div class="top-btns">
+            <button class="btn btn-text">
+                new
+            </button>
+            <button class="btn btn-text">
+                sort
+            </button>
+        </div>
+
+        <div class="GarageBand">
+            <div class="songs__header top-nav">
+                <h2 class="heading top-nav__heading">playlists</h2>
+                <form action="#" class="top-nav__form mb-3">
+                    <label for="search">
+                        <svg class="icon icon-play">
+                            <use xlink:href="img/icons.svg#icon-search"></use>
+                        </svg>
+                    </label>
+                    <input type="text" placeholder="find in song" class="top-nav__input" name="search">
+                </form>
+
+            </div>
+            <div class="playlist__content">
+                <div class="playlist__item">
+                    <figure class="playlist__imgarea">
+                        <img src="img/playlist-img-1.png" alt="playlist">
+                    </figure>
+                    <h4 class="heading">GarageBand</h4>
+                </div>
+                <div class="playlist__item">
+                    <figure class="playlist__imgarea">
+                        <img src="img/playlist-img-1.png" alt="playlist">
+                    </figure>
+                    <h4 class="heading">Untitled Playlists</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <nav class="navbar">
+        <div class="navbar__left">
+            <figure class="navbar__imgarea">
+                <img src="img/player.jpg" alt="player">
+            </figure>
+            <div class="navbar__title">
+                <p class="p-text">82a 8a6 5546 0449 cfb8 61bfc 579 196 7f7</p>
+            </div>
+        </div>
+        <div class="navbar__right">
+            <div class="navbar__buttons">
+                <button class="btn">
+                    <svg class="icon icon-shuffle">
+                        <use xlink:href="img/icons.svg#icon-shuffle1"></use>
+                    </svg>
+                </button>
+
+                <button class="btn">
+                    <svg class="icon icon-playback">
+                        <use xlink:href="img/icons.svg#icon-backward2"></use>
+                    </svg>
+                </button>
+
+                <button class="btn">
+                    <svg class="icon icon-player">
+                        <use xlink:href="img/icons.svg#icon-play3"></use>
+                    </svg>
+                </button>
+
+                <button class="btn">
+                    <svg class="icon icon-playback">
+                        <use xlink:href="img/icons.svg#icon-forward3"></use>
+                    </svg>
+                </button>
+
+                <button class="btn">
+                    <svg class="icon icon-shuffle">
+                        <use xlink:href="img/icons.svg#icon-shuffle"></use>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main js file -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+.playlist-body {
+  .playlist {
+    &__content {
+      margin-top: 14rem;
+      margin-bottom: 7.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 21.5rem));
+      grid-gap: 2rem;
+    }
+
+    &__imgarea {
+      max-height: 21.5rem;
+      max-width: 21.5rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      img {
+        @include img-size;
+        border: 1px solid #d8d8d9;
+        border-radius: 0.6rem;
+      }
+    }
+
+    h4 {
+    }
+  }
+}

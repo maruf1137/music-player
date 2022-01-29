@@ -1,0 +1,43 @@
+.btn {
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: capitalize;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+.btn-text {
+  color: $color-primary;
+  font-size: 2.1rem;
+}
+
+.top-btns {
+  position: fixed;
+  top: 2.5rem;
+  right: 2.5rem;
+  transition: all 0.3s;
+  z-index: 2;
+
+  .dot-btn {
+    padding: 1rem;
+    background-color: #eeeeee;
+    border-radius: 50%;
+
+    .icon {
+      height: 1.4rem;
+      width: 1.6rem;
+      fill: $color-primary;
+      transition: all 0.3s;
+    }
+  }
+
+  .dot-btn:hover {
+    background-color: $color-primary;
+    .icon {
+      fill: $color-white;
+    }
+  }
+}

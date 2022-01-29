@@ -1,0 +1,142 @@
+.GarageBand__playlist {
+  position: fixed;
+  @include pos-center;
+  max-height: 86rem;
+  max-width: 80rem;
+  height: 80%;
+  width: 60%;
+  background-color: $color-white;
+  z-index: 7;
+  overflow-y: scroll;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.205);
+
+  @media only screen and (max-width: $tab-port) {
+    height: 80%;
+    width: 90%;
+  }
+
+  &--webkit-scrollbar {
+    display: none;
+  }
+
+  &--nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &--content {
+    display: grid;
+    grid-template-columns: 34.5rem 1fr;
+    grid-gap: 0 2rem;
+    align-items: start;
+
+    @media only screen and (max-width: $mbl-land) {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem 0;
+      align-items: start;
+    }
+  }
+
+  &--imgarea {
+    max-width: 34.5rem;
+    width: 100%;
+    height: 34.2rem;
+    position: relative;
+
+    @media only screen and (max-width: $mbl-land) {
+      width: 24.2rem;
+      height: 24.2rem;
+    }
+
+    .btn-cam {
+      position: absolute;
+      @include pos-center;
+      background-color: #e6e6e6;
+      height: 9rem;
+      width: 9rem;
+      border-radius: 50%;
+      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.212);
+
+      .icon {
+        height: 1.9rem;
+        width: 2.5rem;
+        fill: #727272;
+      }
+    }
+
+    img {
+      @include img-size;
+      border: 1px solid #d8d8d9;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.116);
+    }
+  }
+
+  &--name {
+    margin-bottom: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #d0d0d0;
+    height: 15rem;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 3.1rem;
+      font-weight: 700;
+      color: #c4c4c6;
+    }
+  }
+
+  &--message {
+    margin-bottom: 2rem;
+    border: none;
+    outline: none;
+    // border-bottom: 1px solid #d0d0d0;
+    height: 10rem;
+    width: 100%;
+    transition: all 0.3s;
+
+    &::placeholder {
+      font-size: 2rem;
+      font-weight: 400;
+      color: #c4c4c6;
+    }
+
+    &:hover {
+      border-bottom: 1px solid #d0d0d0;
+    }
+  }
+
+  &--btns {
+    margin-top: 5rem;
+    border-top: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    padding: 1rem 0;
+    cursor: pointer;
+    .btn-add {
+      display: flex;
+      align-items: center;
+      gap: 0 1rem;
+
+      .icon {
+        height: 2.4rem;
+        width: 2.4rem;
+      }
+
+      span {
+        font-size: 2rem;
+        color: $color-primary;
+      }
+    }
+  }
+
+  &--btns:hover {
+    span {
+      color: $color-gray;
+    }
+  }
+}
